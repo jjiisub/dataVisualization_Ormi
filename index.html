@@ -8,7 +8,12 @@
 </head>
 <body>
     <script>
-        
+        fetch('https://raw.githubusercontent.com/paullabkorea/dataVisualization/main/data.json')
+        .then(data=>data.json())
+        .then(data=>console.log(data))
+        .catch(error => {
+            alert('DATA가 읽히지 않습니다')
+        })
     </script>
 </body>
 </html>
